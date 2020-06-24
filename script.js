@@ -6,7 +6,10 @@ $("#currentDay").text(currentDate);
 
 var nineLock = $("#nine-lock");
 var nineText = $("#nine-text");
+nineText.val(localStorage.getItem("nineEntry"));
 
 nineLock.on("click", function() {
   console.log(nineText.val());
+  var nineEntry = nineText.val();
+  localStorage.setItem("nineEntry", nineEntry);
 });
