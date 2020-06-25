@@ -2,25 +2,29 @@
 $("#currentDay").text(moment().format('MMMM Do, YYYY'));
 
 
-// ---- Variable Declarations & localStorage Value Retrieval ----
+// ---- Variable Declarations, localStorage Gets, & background colors ----
 
 var currentHour = moment().hour();
+// currentHour = 10; //test case
 console.log(currentHour);
 
 // 9AM
 var nineLock = $("#nine-lock");
 var nineText = $("#nine-text");
 nineText.val(localStorage.getItem("nineEntry"));
+colorCode(nineText, 9);
 
 // 10AM
 var tenLock = $("#ten-lock");
 var tenText = $("#ten-text");
 tenText.val(localStorage.getItem("tenEntry"));
+colorCode(tenText, 10);
 
 // 11AM
 var elevenLock = $("#eleven-lock");
 var elevenText = $("#eleven-text");
 elevenText.val(localStorage.getItem("elevenEntry"));
+colorCode(elevenText, 11);
 
 
 // ---- Lock Button Clicks & localStorage Saves ----
@@ -45,3 +49,16 @@ elevenLock.on("click", function() {
   var elevenEntry = elevenText.val();
   localStorage.setItem("elevenEntry", elevenEntry);
 });
+
+
+// ---- Functions ----
+
+function colorCode(inputEl, hour) {
+  if (hour < currentHour) {
+    inputEl.addClass("bg-secondary");
+  } else if (hour === currentHour) {
+    inputEl.addClass("bg-warning");
+  } else {
+    inputEl.addClass("bg-success");
+  }
+}
