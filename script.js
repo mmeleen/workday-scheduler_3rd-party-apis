@@ -133,9 +133,9 @@ fiveLock.on("click", function() {
 
 function colorCode(inputEl, hour) {
   if (hour < currentHour) {
-    inputEl.addClass("bg-secondary");
+    inputEl.addClass("past");
   } else if (hour === currentHour) {
-    inputEl.addClass("bg-warning");
+    inputEl.addClass("bg-secondary");
   } else {
     inputEl.addClass("bg-success");
   }
