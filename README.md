@@ -1,10 +1,10 @@
 # workday-scheduler_3rd-party-apis
 
-# 05 Third-Party APIs: Work Day Scheduler
+# Third-Party APIs: Work Day Scheduler
 
 Task is to create a simple calendar application that allows the user to save events for each hour of the day. App will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
 
-Uses the [Moment.js](https://momentjs.com/) library to work with date and time.
+This code uses the [Moment.js](https://momentjs.com/) library to work with date and time.
 
 # Link to Deployed Project
 https://mmeleen.github.io/workday-scheduler_3rd-party-apis/
