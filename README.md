@@ -1,5 +1,3 @@
-# workday-scheduler_3rd-party-apis
-
 # Third-Party APIs: Work Day Scheduler
 
 Task is to create a simple calendar application that allows the user to save events for each hour of the day. App will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
